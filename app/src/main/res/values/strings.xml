@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Compass</string>
+
+    <string name="main_coordinates_button">Target</string>
+    <string name="main_target_coordinates_caption">Target coordinates:</string>
+    <string name="main_target_coordinates">%1$s %2$s</string>
+    <string name="main_search_button">Search</string>
+
+    <string name="coordinatepick_select">Select</string>
+    <string name="coordinatepick_select_caption">Select target coordinates:</string>
+    <string name="coordinatepick_caption_latitude">Select latitude:</string>
+    <string name="coordinatepick_caption_longitude">Select longitude:</string>
+    <string name="coordinatepick_longitude_hint">Longitude</string>
+    <string name="coordinatepick_latitude_hint">Latitude</string>
+    <string name="coordinatepick_target_match_caption">Target coordinates match:</string>
+    <string name="search_search_button">Search</string>
+    <string name="search_hint">Search for places</string>
+    <string name="search_results_caption">Search results:</string>
+    <string name="main_select_target_button">Select target</string>
+</resources>

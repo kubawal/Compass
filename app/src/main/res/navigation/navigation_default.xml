@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_default"
+    app:startDestination="@id/mainScreen">
+
+    <fragment
+        android:id="@+id/mainScreen"
+        android:name="com.mfkw.compass.screen.main.MainScreen"
+        android:label="Compass"
+        tools:layout="@layout/screen_main" >
+        <action
+            android:id="@+id/action_mainScreen_to_pickCoordinateScreen"
+            app:destination="@id/pickCoordinateScreen"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+        <action
+            android:id="@+id/action_mainScreen_to_searchScreen"
+            app:destination="@id/searchScreen"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pickCoordinateScreen"
+        android:name="com.mfkw.compass.screen.pickcoordinate.PickCoordinateScreen"
+        android:label="Target coordinates"
+        tools:layout="@layout/screen_coordinatepick">
+        <argument
+            android:name="oldCoordinates"
+            app:argType="com.mfkw.compass.model.Coordinates"
+            app:nullable="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/searchScreen"
+        android:name="com.mfkw.compass.screen.search.SearchScreen"
+        android:label="SearchScreen"
+        tools:layout="@layout/screen_search"/>
+</navigation>

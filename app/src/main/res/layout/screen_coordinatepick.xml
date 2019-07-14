@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/selectButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/coordinatepick_select"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/longitudeEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/coordinatepick_longitude_hint"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toStartOf="@+id/longitudeChips"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/latitudeEdit" />
+
+    <EditText
+        android:id="@+id/latitudeEdit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/coordinatepick_latitude_hint"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toStartOf="@+id/latitudeChips"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coordinateCaption" />
+
+    <TextView
+        android:id="@+id/coordinateCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/coordinatepick_select_caption"
+        android:textSize="10pt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/longitudeChips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:checkedChip="@id/chipE"
+        app:layout_constraintBottom_toBottomOf="@+id/longitudeEdit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/longitudeEdit"
+        app:singleLine="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipE"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="E"
+            android:textAlignment="center"
+            android:textSize="22sp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipW"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="W"
+            android:textAlignment="center"
+            android:textSize="22sp" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/latitudeChips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        app:checkedChip="@id/chipN"
+        app:layout_constraintBottom_toBottomOf="@+id/latitudeEdit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/latitudeEdit"
+        app:singleLine="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipN"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="N"
+            android:textAlignment="center"
+            android:textSize="22sp" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipS"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="S"
+            android:textAlignment="center"
+            android:textSize="22sp" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <TextView
+        android:id="@+id/targetMatchCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/coordinatepick_target_match_caption"
+        android:textSize="10pt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/longitudeEdit" />
+
+    <TextView
+        android:id="@+id/targetMatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textSize="9pt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/targetMatchCaption"
+        tools:text="Abc road, 76548 South Virginia" />
+</androidx.constraintlayout.widget.ConstraintLayout>
